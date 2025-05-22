@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digi Fest</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            color: #000000;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+            grid-template-areas: 
+                "header header"
+                "sidebar main"
+                "footer footer";
+        }
+
+        header {
+            grid-area: header;
+            background-color: #17072b;
+            color: #FFFFFF;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            font-family: Tahoma, sans-serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            grid-area: sidebar;
+            background-color: #172d67;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-bottom: 15px;
+        }
+
+        nav ul li a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: block;
+            padding: 8px 0;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            grid-area: main;
+            padding: 30px;
+            background-color: #FFFFFF;
+        }
+
+        .welcome-section {
+            margin-bottom: 40px;
+        }
+
+        .welcome-section h2 {
+            font-family: Tahoma, sans-serif;
+            font-weight: 700;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #000000;
+        }
+
+        .welcome-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .lineup-section h3 {
+            font-family: Tahoma, sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #000000;
+        }
+
+        .lineup-images {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .lineup-images img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 2px solid #ddd;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #8c15e9;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                    "header"
+                    "sidebar"
+                    "main"
+                    "footer";
+            }
+            
+            nav {
+                padding: 15px;
+            }
+            
+            nav ul {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            
+            nav ul li {
+                margin-bottom: 0;
+            }
+            
+            .lineup-images {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Digi Fest</div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#lineup">Line Up</a></li>
+                <li><a href="#tickets">Tickets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section class="welcome-section">
+                <h2>Welcome</h2>
+                <p>Digi Fest is a celebration of digital and technology in the city of Cardiff. This year, we are celebrating 'collaboration', so come and find out about the latest collaborations that are happening in this historic and innovative city. They promise an educational and inspirational packed programme for all.</p>
+            </section>
+
+            <section class="lineup-section">
+                <h3>Line Up</h3>
+                <p>Check out our amazing lineup of speakers and performers who will be showcasing the best in digital innovation and collaborative technology.</p>
+                
+                <div class="lineup-images">
+                    <img src="Mark.jpg" alt="Speaker 1" />
+                    <img src="Zhang.jfif" alt="Speaker 2" />
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Digi Fest. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
